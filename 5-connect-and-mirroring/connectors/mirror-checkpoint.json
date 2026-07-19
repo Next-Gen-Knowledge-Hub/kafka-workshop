@@ -1,0 +1,14 @@
+{
+  "name": "mirror-checkpoint",
+  "config": {
+    "connector.class": "org.apache.kafka.connect.mirror.MirrorCheckpointConnector",
+    "tasks.max": "1",
+    "source.cluster.alias": "source",
+    "target.cluster.alias": "target",
+    "source.cluster.bootstrap.servers": "kafka-source:29092",
+    "target.cluster.bootstrap.servers": "kafka-target:29092",
+    "groups": "mirror-demo-consumers",
+    "emit.checkpoints.enabled": "true",
+    "sync.group.offsets.enabled": "true"
+  }
+}
